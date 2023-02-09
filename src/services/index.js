@@ -1,6 +1,6 @@
 import axios from "axios";
-
-axios.defaults.baseURL = "http://localhost:3001";
+// Edit this for the api
+axios.defaults.baseURL = "https://gym-manager-app-api.onrender.com";
 
 export async function getAllMembers() {
   return await axios.get("/members").then((res) => res.data);

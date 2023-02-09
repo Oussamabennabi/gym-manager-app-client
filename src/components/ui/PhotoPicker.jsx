@@ -5,8 +5,8 @@ export default function PhotoPicker({ value,onChange }) {
   const imageSource = useCallback(() => {
     
     if (value == null || value == undefined)
-      return "http://localhost:3001/photos/avatar.svg";
-    if (typeof value === "string") return value.startsWith("data:image/jpeg;base64,")?value:"http://localhost:3001/photos/"+value;
+      return "https://gym-manager-app-api.onrender.com/photos/avatar.svg";
+    if (typeof value === "string") return value.startsWith("data:image/jpeg;base64,")?value:"https://gym-manager-app-api.onrender.com/photos/"+value;
     if (typeof value === "object") return URL.createObjectURL(value);
   }, [value, onChange]);
   return (
